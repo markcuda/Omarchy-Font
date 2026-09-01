@@ -32,4 +32,8 @@ On the web:
 
 ## Credits
 
-Omarchy is by DHH and 37signals. *Delta Corps Priest 1* is by CoSMiC cHiLD. This is a fan project by Mark Cuda, not affiliated with either. Free to use, share and modify.
+Omarchy is by DHH and 37signals. *Delta Corps Priest 1* is by CoSMiC cHiLD. This is a fan project by Mark Cuda, not affiliated with either; the Omarchy name and wordmark remain theirs.
+
+## License
+
+[MIT](LICENSE). Use it, ship it, remix it.
