@@ -4,7 +4,7 @@ The [Omarchy](https://omarchy.org) wordmark as a real, installable font. Type an
 
 ![Omarchy Font specimen](specimen.svg)
 
-**[Try it in the browser →](https://demo-rust-rho-59.vercel.app)**
+**[Try it in the browser →](https://tinker.markcuda.com/omarchy-font/)**
 
 ## Install
 
