@@ -17,7 +17,10 @@ def glyph(rows):
     if not points: return struct.pack(">hhhhh", 0, 0, 0, width, 0), width
     b = struct.pack(">hhhhh", len(contours), 0, 0, width, len(rows)*100)
     b += struct.pack(">"+"H"*len(contours), *contours) + bytes([1,1,1,1])*len(contours)
-    return b + b"".join(struct.pack(">hh", *point) for point in points), width
+    encoded, px, py = b"", 0, 0
+    for x, y in points:
+        encoded += struct.pack(">hh", x-px, y-py); px, py = x, y
+    return b + encoded, width
 def table(tag, data): return tag, p4(data), len(data)
 def main(src, dest):
     lines = Path(src).read_text(encoding="utf-8").splitlines(); hard, height, _, _, _, comments = lines[0].split()[:6]
