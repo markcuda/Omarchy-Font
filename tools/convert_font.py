@@ -16,7 +16,7 @@ def glyph(rows):
             points += [(x0,y0),(x1,y0),(x1,y1),(x0,y1)]; contours.append(len(points)-1)
     if not points: return struct.pack(">hhhhh", 0, 0, 0, width, 0), width
     b = struct.pack(">hhhhh", len(contours), 0, 0, width, len(rows)*100)
-    b += struct.pack(">"+"H"*len(contours), *contours) + bytes([1,1,1,1])*len(contours)
+    b += struct.pack(">"+"H"*len(contours), *contours) + struct.pack(">H", 0) + bytes([1,1,1,1])*len(contours)
     encoded, px, py = b"", 0, 0
     for x, y in points:
         encoded += struct.pack(">hh", x-px, y-py); px, py = x, y
